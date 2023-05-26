@@ -16,7 +16,7 @@ export default function Navbar() {
   const [profile, setProfile] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/getprofile").then((response) => {
+    axios.get("/api/getprofile").then((response) => {
       setProfile(response.data);
     });
   }, []);
